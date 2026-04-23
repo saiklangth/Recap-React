@@ -1,55 +1,28 @@
-// import Book from "./components/Book"
-// import TestProps from "./components/TestProps"
-// import Title from "./components/Title"
-
-
-// //rafce
-// const App = () => {
-
-//   const user = [
-//     { id: 1, name: "Gao" },
-//     { id: 2, name: "Buta" }
-//   ]
-
-//   return (
-//     <div>
-
-//       {/* การส่ง props ต้องส่งจากแม่มาหาลูก */}
-//       <Title test="Easy React" price={500} />
-//       <Book name="Basic Javascript" author="Gao" />
-
-//       {/* การส่ง props แบบ children + props แบบปกติ */}
-//       <TestProps data={user}>
-//         <p>
-//           Para.........
-//           <span>price......</span>
-//         </p>
-//         <button>Submit</button>
-//       </TestProps>
-
-//     </div>
-//   )
-// }
-// export default App
-
-import { useState } from "react"
+import BasicUseReducer from "./components/BasicUseReducer"
+import BasicUseReducer2 from "./components/BasicUseReducer2"
+import ConditionBasic from "./components/ConditionBasic"
+import FetchBasic from "./components/FetchBasic"
+import FormInput from "./components/FormInput"
+import ListBasic from "./components/ListBasic"
+import UseEffectBasic from "./components/UseEffectBasic"
 
 const App = () => {
   // JS
-  const [msg, setMsg] = useState(0)
-  console.log(msg)
-
-  const hdlShow = () => {
-    setMsg(msg + 1)
-  }
-  // hdlShow()
-
-  // HSML(JSX)
+  const users = [
+    { id: 1, name: 'Gao' },
+    { id: 2, name: 'Dev' },
+  ]
+  // JSX
   return (
-    <div>
-      App--{msg}
-      <button onClick={hdlShow}>Jukkru!</button>
-    </div>
+    <>
+      {/* <FormInput />
+      <ListBasic users={users} />
+      <UseEffectBasic />
+      <FetchBasic />
+      <ConditionBasic />
+      <BasicUseReducer /> */}
+      <BasicUseReducer2 />
+    </>
   )
 }
 export default App
